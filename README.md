@@ -37,7 +37,7 @@ python -m pip install -r requirements.txt
 3. Run the server:
 ```bash
 uvicorn api:app --reload
-```
+``` 
 
 4. Access the API:
 ```
