@@ -41,7 +41,7 @@ uvicorn api:app --reload
 
 4. Access the API:
 ```
-project-9809q.vercel.app
+https://anikan-nxc5udemc-dramakans-projects.vercel.app/
 ```
 
 ## Project Structure
