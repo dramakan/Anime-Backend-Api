@@ -41,7 +41,7 @@ uvicorn api:app --reload
 
 4. Access the API:
 ```
-http://127.0.0.1:8000
+project-9809q.vercel.app
 ```
 
 ## Project Structure
