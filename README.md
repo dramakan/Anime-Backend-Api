@@ -41,7 +41,7 @@ uvicorn api:app --reload
 
 4. Access the API:
 ```
-https://anikan-nxc5udemc-dramakans-projects.vercel.app/
+http://127.0.0.1:8000
 ```
 
 ## Project Structure
@@ -75,7 +75,7 @@ Search anime by keyword with pagination.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/search?query=naruto&page=1"
+curl "http://127.0.0.1:8000/anime/search?query=naruto&page=1"
 ```
 
 #### `GET /anime/suggestions`
@@ -86,7 +86,7 @@ Lightweight autocomplete search for dropdowns.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/suggestions?query=one%20piece"
+curl "http://127.0.0.1:8000/anime/suggestions?query=one%20piece"
 ```
 
 #### `GET /anime/genres`
@@ -94,7 +94,7 @@ List all available genres for filtering.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/genres"
+curl "http://127.0.0.1:8000/anime/genres"
 ```
 
 ### Collections
@@ -104,7 +104,7 @@ Top 10 trending and popular anime.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/spotlight"
+curl "http://127.0.0.1:8000/anime/spotlight"
 ```
 
 #### `GET /anime/trending`
@@ -116,7 +116,7 @@ Currently trending anime with pagination.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/trending?page=1&per_page=20"
+curl "http://127.0.0.1:8000/anime/trending?page=1&per_page=20"
 ```
 
 #### `GET /anime/popular`
@@ -128,7 +128,7 @@ Most popular anime of all time.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/popular"
+curl "http://127.0.0.1:8000/anime/popular"
 ```
 
 #### `GET /anime/upcoming`
@@ -140,7 +140,7 @@ Upcoming anime releases.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/upcoming"
+curl "http://127.0.0.1:8000/anime/upcoming"
 ```
 
 #### `GET /anime/recent`
@@ -152,7 +152,7 @@ Recently aired episodes.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/recent"
+curl "http://127.0.0.1:8000/anime/recent"
 ```
 
 #### `GET /anime/schedule`
@@ -164,7 +164,7 @@ Airing schedule for upcoming episodes.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/schedule"
+curl "http://127.0.0.1:8000/anime/schedule"
 ```
 
 ### Advanced Filtering
@@ -193,7 +193,7 @@ Filter anime by multiple criteria.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/filter?genre=Action&sort=SCORE_DESC&year=2024"
+curl "http://127.0.0.1:8000/anime/filter?genre=Action&sort=SCORE_DESC&year=2024"
 ```
 
 ### Anime Details
@@ -203,7 +203,7 @@ Complete anime information including characters, relations, staff, and recommend
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/info/21"
+curl "http://127.0.0.1:8000/anime/info/21"
 ```
 
 #### `GET /anime/anime/{anilist_id}/characters`
@@ -215,7 +215,7 @@ Character list with voice actors.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/anime/21/characters"
+curl "http://127.0.0.1:8000/anime/anime/21/characters"
 ```
 
 #### `GET /anime/anime/{anilist_id}/relations`
@@ -223,7 +223,7 @@ Related anime (sequels, prequels, spin-offs).
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/anime/21/relations"
+curl "http://127.0.0.1:8000/anime/anime/21/relations"
 ```
 
 #### `GET /anime/anime/{anilist_id}/recommendations`
@@ -235,7 +235,7 @@ Recommended similar anime.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/anime/21/recommendations"
+curl "http://127.0.0.1:8000/anime/anime/21/recommendations"
 ```
 
 ### Streaming
@@ -245,7 +245,7 @@ Get episode list with provider mappings.
 
 **Example:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/episodes/21"
+curl "http://127.0.0.1:8000/anime/episodes/21"
 ```
 
 #### `GET /anime/extract/{query}` 
@@ -265,16 +265,16 @@ curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/episodes/21"
 **Examples:**
 ```bash
 # Using AniList ID
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/extract/21?e=1"
+curl "http://127.0.0.1:8000/anime/extract/21?e=1"
 
 # Using anime name (spaces work)
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/extract/violet%20evergarden?e=1"
+curl "http://127.0.0.1:8000/anime/extract/violet%20evergarden?e=1"
 
 # Using hyphenated name
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/extract/my-hero-academia?e=5"
+curl "http://127.0.0.1:8000/anime/extract/my-hero-academia?e=5"
 
 # Movie (episode param ignored)
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/extract/a-silent-voice"
+curl "http://127.0.0.1:8000/anime/extract/a-silent-voice"
 ```
 
 **Tip:** If search by name fails, use `/anime/search?query=<name>` to get the exact AniList ID first.
@@ -301,22 +301,22 @@ Proxy video segments with referer injection.
 
 1. **Search for anime:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/search?query=demon%20slayer"
+curl "http://127.0.0.1:8000/anime/search?query=demon%20slayer"
 ```
 
 2. **Get anime info (use ID from search):**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/info/101922"
+curl "http://127.0.0.1:8000/anime/info/101922"
 ```
 
 3. **Get episodes:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/episodes/101922"
+curl "http://127.0.0.1:8000/anime/episodes/101922"
 ```
 
 4. **Extract streaming source:**
 ```bash
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/extract/101922?e=1"
+curl "http://127.0.0.1:8000/anime/extract/101922?e=1"
 ```
 
 ### Quick Extraction
@@ -324,10 +324,10 @@ curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/extract/1019
 Skip all steps and directly extract:
 ```bash
 # By name
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/extract/demon%20slayer?e=1"
+curl "http://127.0.0.1:8000/anime/extract/demon%20slayer?e=1"
 
 # By ID
-curl "https://anikan-nxc5udemc-dramakans-projects.vercel.app//anime/extract/101922?e=1"
+curl "http://127.0.0.1:8000/anime/extract/101922?e=1"
 ```
 
 ## Response Format
